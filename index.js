@@ -6,7 +6,7 @@ const { FLAGS } = discord.Intents;
 const app = express();
 
 app.get("/", (req, res) => {
-  res.send("h");
+  res.send(`h ${res.query.a || "null"}`);
 });
 
 app.listen(process.env.PORT || 3000, () => {
@@ -39,6 +39,8 @@ bot.on("ready", () => {
 });
 
 bot.on("messageCreate", async (msg) => {
+  console.log(`${msg.author.tag}: ${msg.content}`);
+
   if (msg.author.id === "662201438621138954") msg.reply("dd");
 });
 
