@@ -1,0 +1,26 @@
+{
+  "name": "denesor-cc-3.0",
+  "version": "0.1.0",
+  "description": "desc",
+  "main": "index.js",
+  "scripts": {
+    "start": "node -v && node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abiriadev/denesor-cc-3.0.git"
+  },
+  "keywords": [
+    "bot"
+  ],
+  "author": "Abiria",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abiriadev/denesor-cc-3.0/issues"
+  },
+  "homepage": "https://github.com/abiriadev/denesor-cc-3.0#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
