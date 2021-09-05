@@ -1,31 +1,38 @@
 {
-  "name": "denesor-cc-3.0",
-  "version": "0.1.0",
-  "description": "desc",
-  "main": "index.js",
-  "scripts": {
-    "start": "node -v && npm i -g n && n latest %% node -v && node ./index.js",
-    "dev": "node -r dotenv/config ./index.js",
-    "test": "node -v"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/abiriadev/denesor-cc-3.0.git"
-  },
-  "keywords": [
-    "bot"
-  ],
-  "author": "Abiria",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/abiriadev/denesor-cc-3.0/issues"
-  },
-  "homepage": "https://github.com/abiriadev/denesor-cc-3.0#readme",
-  "dependencies": {
-    "discord.js": "^13.1.0",
-    "express": "^4.17.1"
-  },
-  "devDependencies": {
-    "dotenv": "^10.0.0"
-  }
+    "name": "denesor-cc-3.0",
+    "version": "0.1.0",
+    "description": "desc",
+    "main": "index.js",
+    "scripts": {
+        "start": "npm i -g n && n latest && node -v && tsc && pm2 link bqu1r0h7z2k8n3a 5oa967qw9un7hmu && pm2 kill && pm2 start ./ecosystem.json && pm2 log",
+        "start:dev": "tsc && pm2 link bqu1r0h7z2k8n3a 5oa967qw9un7hmu && pm2 kill && pm2 start ./ecosystem.json && pm2 log",
+        "dev": "ts-node -r dotenv/config ./src/index.ts",
+        "test": "node -v"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/abiriadev/denesor-cc-3.0.git"
+    },
+    "keywords": [
+        "bot"
+    ],
+    "author": "Abiria",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/abiriadev/denesor-cc-3.0/issues"
+    },
+    "homepage": "https://github.com/abiriadev/denesor-cc-3.0#readme",
+    "dependencies": {
+        "axios": "^0.21.3",
+        "discord.js": "^13.1.0",
+        "express": "^4.17.1",
+        "morgan": "^1.10.0"
+    },
+    "devDependencies": {
+        "@types/node": "^16.7.10",
+        "dotenv": "^10.0.0",
+        "pm2": "^5.1.1",
+        "ts-node": "^10.2.1",
+        "typescript": "^4.4.2"
+    }
 }
