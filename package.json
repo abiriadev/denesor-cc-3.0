@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "npm i -g n && n latest && node -v && npx tsc && pm2 link bqu1r0h7z2k8n3a 5oa967qw9un7hmu && pm2 kill && pm2 start ./ecosystem.json && pm2 log",
-        "start:dev": "tsc && pm2 link bqu1r0h7z2k8n3a 5oa967qw9un7hmu && pm2 kill && pm2 start ./ecosystem.json && pm2 log",
+        "start:dev": "npx tsc && pm2 link bqu1r0h7z2k8n3a 5oa967qw9un7hmu && pm2 kill && pm2 start ./ecosystem.json && pm2 log",
         "dev": "ts-node -r dotenv/config ./src/index.ts",
         "test": "node -v"
     },
