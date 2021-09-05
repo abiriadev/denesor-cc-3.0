@@ -44,4 +44,6 @@ bot.on("messageCreate", async (msg) => {
   if (msg.author.id === "662201438621138954") msg.reply("dd");
 });
 
-bot.login();
+bot.login().catch(() => {
+  console.error("discord login error");
+});

@@ -4,7 +4,7 @@
   "description": "desc",
   "main": "index.js",
   "scripts": {
-    "start": "node -v && node ./index.js",
+    "start": "node -v && npm i -g n && n latest %% node -v && node ./index.js",
     "dev": "node -r dotenv/config ./index.js",
     "test": "node -v"
   },
