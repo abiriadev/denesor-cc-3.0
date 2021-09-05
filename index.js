@@ -6,7 +6,7 @@ const { FLAGS } = discord.Intents;
 const app = express();
 
 app.get("/", (req, res) => {
-  res.send(`h ${res.query.a || "null"}`);
+  res.send(`h ello`);
 });
 
 app.listen(process.env.PORT || 3000, () => {
