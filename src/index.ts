@@ -34,13 +34,25 @@ const getTimeTag = (d = new Date()) =>
 const getLink = (g: string, c: string, m: string) =>
     `https://discord.com/channels/${g}/${c}/${m}`
 
+const getip = req =>
+    req.headers['x-forwarded-for'] ||
+    req.connection.remoteAddress ||
+    req.socket.remoteAddress ||
+    req.connection.socket.remoteAddress
+
+let ip: string | null = null
+
+app.use((req: express.Request) => {
+    ip = getip(req)
+})
+
 app.use(
-    morgan(process.env.NODE_ENV === 'production' ? 'combined' : 'dev', {
+    morgan(process.env.NODE_ENV === 'production' ? 'dev' : 'dev', {
         stream: {
             write(str: string): void {
                 const original = str.slice(0, str.length - 1)
 
-                console.log(original)
+                console.log(`(${ip}): ${original}`)
 
                 db.log.log(original, 'SERVER')
             },
