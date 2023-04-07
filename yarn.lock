@@ -1529,8 +1529,8 @@ vizion@~2.2.1:
     js-git "^0.7.8"
 
 vm2@^3.9.8:
-  version "3.9.13"
-  resolved "https://registry.yarnpkg.com/vm2/-/vm2-3.9.13.tgz#774a1a3d73b9b90b1aa45bcc5f25e349f2eef649"
+  version "3.9.15"
+  resolved "https://registry.yarnpkg.com/vm2/-/vm2-3.9.15.tgz#c544e6a9bc31e4e40d2e5f532342cf799ea56a6e"
   dependencies:
     acorn "^8.7.0"
     acorn-walk "^8.2.0"
