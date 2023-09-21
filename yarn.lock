@@ -1414,8 +1414,8 @@ supports-color@^7.1.0:
     has-flag "^4.0.0"
 
 systeminformation@^5.7:
-  version "5.8.7"
-  resolved "https://registry.npmjs.org/systeminformation/-/systeminformation-5.8.7.tgz"
+  version "5.21.8"
+  resolved "https://registry.yarnpkg.com/systeminformation/-/systeminformation-5.21.8.tgz#18395187e5983698619ed07ca8640ae48ec232b2"
 
 to-regex-range@^5.0.1:
   version "5.0.1"
